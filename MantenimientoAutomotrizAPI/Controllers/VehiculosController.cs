@@ -11,21 +11,21 @@ namespace MantenimientoAutomotrizAPI.Controllers
     {
         private readonly AppDbContext _context;
 
-        // El constructor inyecta nuestra base de datos
+        //el constructor inyecta nuestra base de datos
         public VehiculosController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Vehiculos (Obtener todos los vehículos con su historial)
+        //GET: api/Vehiculos (obtiene todos los vehiculos con su historial)
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Vehiculo>>> GetVehiculos()
         {
-            // El .Include hace el JOIN automático en SQL Server
+            //el .Include hace el JOIN automatico en SQL Server
             return await _context.Vehiculos.Include(v => v.Mantenimientos).ToListAsync();
         }
 
-        // POST: api/Vehiculos (Registrar un nuevo vehículo)
+        //POST: api/Vehiculos (registra un nuevo vehículo)
         [HttpPost]
         public async Task<ActionResult<Vehiculo>> PostVehiculo(Vehiculo vehiculo)
         {

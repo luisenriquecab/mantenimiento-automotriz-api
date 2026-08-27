@@ -16,11 +16,11 @@ namespace MantenimientoAutomotrizAPI.Controllers
             _context = context;
         }
 
-        // POST: api/Mantenimientos (Registrar un nuevo servicio)
+        //POST: api/Mantenimientos (registra un nuevo servicio)
         [HttpPost]
         public async Task<ActionResult<Mantenimiento>> PostMantenimiento(Mantenimiento mantenimiento)
         {
-            // Validar de forma robusta que el vehículo realmente exista en la base de datos
+            //valida de forma robusta que el vehiculo realmente exista en la base de datos
             var vehiculoExiste = await _context.Vehiculos.AnyAsync(v => v.Id == mantenimiento.VehiculoId);
             if (!vehiculoExiste)
             {
