@@ -45,7 +45,8 @@ El proyecto demuestra la implementación de una arquitectura robusta, operacione
 ```
 
 ## INSTRUCCIONES DE INSTALACION LOCAL
-**1. Clonar el repositorio: bash git clone [https://github.com/tu-usuario/mantenimiento-automotriz-api.git](https://github.com/tu-usuario/mantenimiento-automotriz-api.git)
+**1. Clonar el repositorio:
+```bash git clone [https://github.com/tu-usuario/mantenimiento-automotriz-api.git](https://github.com/tu-usuario/mantenimiento-automotriz-api.git)
 **2. Navega al directorio del proyecto: cd MantenimientoAutomotrizAPI
 **3. Genera la base de datos y las tablas en SQL Server:dotnet ef database update
 **4. Ejecuta la aplicación: dotnet run
